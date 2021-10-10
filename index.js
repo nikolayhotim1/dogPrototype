@@ -72,6 +72,7 @@ spot.bark = function () {
 let barnaby = new Dog('Barnaby', 'Basset Hound', 55);
 let scotty = new ShowDog('Scotty', 'Scottish Terrier', 15, 'Cookie');
 let ruta = new ShowDog('Ruta', 'Maltese lapdog', 8, 'N1kolay');
+let lusy = new ShowDog('Lusy', 'Cocker spaniel', 28, 'Rainbow');
 
 scotty.stack();
 scotty.bark();
@@ -83,30 +84,7 @@ ruta.bark();
 ruta.groom();
 ruta.wag();
 
-// fido.bark();
-// fido.run();
-// fido.wag();
-
-// fluffy.bark();
-// fluffy.run();
-// fluffy.wag();
-
-// spot.bark();
-// spot.run();
-// spot.wag();
-
-// barnaby.bark();
-// barnaby.run();
-// barnaby.wag();
-
-// barnaby.sit();
-// barnaby.sit();
-// spot.sit();
-// spot.sit();
-
-// console.log(spot.hasOwnProperty('species')); // false
-// console.log(fido.hasOwnProperty('species')); // false
-// console.log(barnaby.hasOwnProperty('sitting')); // true
-// console.log(spot.hasOwnProperty('sitting')); // true
-// console.log(fido.hasOwnProperty('sitting')); // false
-// console.log(fluffy.hasOwnProperty('sitting')); // false
+lusy.gait('Rotary gallop');
+lusy.bark();
+lusy.run();
+lusy.sit();
