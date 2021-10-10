@@ -88,3 +88,31 @@ lusy.gait('Rotary gallop');
 lusy.bark();
 lusy.run();
 lusy.sit();
+
+if (fido instanceof Dog) {
+    console.log("Fido is a Dog");
+}
+if (fido instanceof ShowDog) {
+    console.log("Fido is a ShowDog");
+}
+// Fido is a Dog
+if (scotty instanceof Dog) {
+    console.log("Scotty is a Dog");
+}
+if (scotty instanceof ShowDog) {
+    console.log("Scotty is a ShowDog");
+}
+// Scotty is a Dog
+// Scotty is a ShowDog
+console.log("Fido constructor is " + fido.constructor);
+// Fido constructor is function Dog(name, breed, weight) {
+// this.name = name;
+// this.breed = breed;
+// this.weight = weight;
+// }
+console.log("Scotty constructor is " + scotty.constructor);
+// Scotty constructor is function Dog(name, breed, weight) {
+// this.name = name;
+// this.breed = breed;
+// this.weight = weight;
+// }
