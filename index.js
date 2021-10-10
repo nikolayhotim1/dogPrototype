@@ -71,11 +71,17 @@ spot.bark = function () {
 
 let barnaby = new Dog('Barnaby', 'Basset Hound', 55);
 let scotty = new ShowDog('Scotty', 'Scottish Terrier', 15, 'Cookie');
+let ruta = new ShowDog('Ruta', 'Maltese lapdog', 8, 'N1kolay');
 
 scotty.stack();
 scotty.bark();
 console.log(scotty.league);
 console.log(scotty.species);
+
+ruta.bait();
+ruta.bark();
+ruta.groom();
+ruta.wag();
 
 // fido.bark();
 // fido.run();
