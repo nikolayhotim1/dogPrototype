@@ -6,9 +6,7 @@ function Dog(name, breed, weight) {
 }
 
 function ShowDog(name, breed, weight, handler) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
+    Dog.call(this, name, breed, weight);
     this.handler = handler;
 }
 
@@ -42,7 +40,7 @@ Dog.prototype.sit = function () {
 };
 
 ShowDog.prototype = new Dog();
-
+ShowDog.prototype.constructor = ShowDog;
 ShowDog.prototype.league = 'Webville';
 
 ShowDog.prototype.stack = function () {
@@ -106,13 +104,12 @@ if (scotty instanceof ShowDog) {
 // Scotty is a ShowDog
 console.log("Fido constructor is " + fido.constructor);
 // Fido constructor is function Dog(name, breed, weight) {
-// this.name = name;
-// this.breed = breed;
-// this.weight = weight;
+//     this.name = name;
+//     this.breed = breed;
+//     this.weight = weight;
 // }
 console.log("Scotty constructor is " + scotty.constructor);
-// Scotty constructor is function Dog(name, breed, weight) {
-// this.name = name;
-// this.breed = breed;
-// this.weight = weight;
+// Scotty constructor is function ShowDog(name, breed, weight, handler) {
+//     Dog.call(this, name, breed, weight);
+//     this.handler = handler;
 // }
