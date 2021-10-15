@@ -1,13 +1,17 @@
 'use strict';
-function Dog(name, breed, weight) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
+class Dog {
+    constructor(name, breed, weight) {
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+    }
 }
 
-function ShowDog(name, breed, weight, handler) {
-    Dog.call(this, name, breed, weight);
-    this.handler = handler;
+class ShowDog extends Dog {
+    constructor(name, breed, weight, handler) {
+        super(name, breed, weight);
+        this.handler = handler;
+    }
 }
 
 Dog.prototype.species = 'Canine';
@@ -39,8 +43,6 @@ Dog.prototype.sit = function () {
     }
 };
 
-ShowDog.prototype = new Dog();
-ShowDog.prototype.constructor = ShowDog;
 ShowDog.prototype.league = 'Webville';
 
 ShowDog.prototype.stack = function () {
