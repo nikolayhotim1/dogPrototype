@@ -5,6 +5,31 @@ class Dog {
         this.breed = breed;
         this.weight = weight;
     }
+
+    bark() {
+        if (this.weight > 25) {
+            console.log(this.name + ' says Woof!');
+        } else {
+            console.log(this.name + ' says Yip!');
+        }
+    }
+
+    run() {
+        console.log('Run!');
+    }
+
+    wag() {
+        console.log('Wag!');
+    }
+
+    sit() {
+        if (this.sitting) {
+            console.log(this.name + ' is already sitting');
+        } else {
+            this.sitting = true;
+            console.log(this.name + ' is now sitting');
+        }
+    }
 }
 
 class ShowDog extends Dog {
@@ -12,54 +37,27 @@ class ShowDog extends Dog {
         super(name, breed, weight);
         this.handler = handler;
     }
+
+    stack() {
+        console.log('Stack');
+    }
+
+    bait() {
+        console.log('Bait');
+    }
+
+    gait(kind) {
+        console.log(kind + 'ing');
+    }
+
+    groom() {
+        console.log('Groom');
+    }
 }
 
 Dog.prototype.species = 'Canine';
-
-Dog.prototype.bark = function () {
-    if (this.weight > 25) {
-        console.log(this.name + ' says Woof!');
-    } else {
-        console.log(this.name + ' says Yip!');
-    }
-};
-
-Dog.prototype.run = function () {
-    console.log('Run!');
-};
-
-Dog.prototype.wag = function () {
-    console.log('Wag!');
-};
-
 Dog.prototype.sitting = false;
-
-Dog.prototype.sit = function () {
-    if (this.sitting) {
-        console.log(this.name + ' is already sitting');
-    } else {
-        this.sitting = true;
-        console.log(this.name + ' is now sitting');
-    }
-};
-
 ShowDog.prototype.league = 'Webville';
-
-ShowDog.prototype.stack = function () {
-    console.log('Stack');
-};
-
-ShowDog.prototype.bait = function () {
-    console.log('Bait');
-};
-
-ShowDog.prototype.gait = function (kind) {
-    console.log(kind + 'ing');
-};
-
-ShowDog.prototype.groom = function () {
-    console.log('Groom');
-};
 
 let fido = new Dog('Fido', 'Mixed', 38);
 let fluffy = new Dog('Fluffy', 'Poodle', 30);
